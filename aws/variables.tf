@@ -2,16 +2,11 @@
 
 // TODO - use null defaults
 
-# Required
-variable "aws_access_key" {
-  type        = string
-  description = "AWS access key used to create infrastructure"
-}
 
 # Required
-variable "aws_secret_key" {
+variable "aws_profile" {
   type        = string
-  description = "AWS secret key used to create AWS infrastructure"
+  description = "AWS aws_profile used to create AWS infrastructure"
 }
 
 variable "aws_region" {
