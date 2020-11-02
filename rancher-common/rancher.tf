@@ -13,6 +13,9 @@ resource "rancher2_bootstrap" "admin" {
 }
 
 # Create custom managed cluster for quickstart
+# https://registry.terraform.io/providers/rancher/rancher2/latest/docs/resources/cluster#rke_config
+# https://jmrobles.medium.com/how-to-setup-hetzner-load-balancer-on-a-kubernetes-cluster-2ce79ca4a27b
+# https://github.com/hetznercloud/hcloud-cloud-controller-manager/blob/master/internal/annotation/load_balancer.go#L13
 resource "rancher2_cluster" "quickstart_workload" {
   provider = rancher2.admin
 
