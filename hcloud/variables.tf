@@ -1,27 +1,17 @@
-# Variables for DO infrastructure module
+variable "servers" {}
+variable "rancher_server_dns" {}
+variable "workload_cluster_name" {}
 
 variable "hcloud_token" {
   type        = string
   description = " Hetzner Cloud Provider API token used to create infrastructure"
 }
 
-# variable "do_region" {
-#   type        = string
-#   description = "DigitalOcean region used for all resources"
-#   default     = "nyc1"
-# }
-
 variable "prefix" {
   type        = string
   description = "Prefix added to names of all resources"
   default     = "quickstart"
 }
-
-# variable "droplet_size" {
-#   type        = string
-#   description = "Droplet size used for all droplets"
-#   default     = "s-2vcpu-4gb"
-# }
 
 variable "docker_version" {
   type        = string
